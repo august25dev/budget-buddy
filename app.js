@@ -22,6 +22,8 @@
         // - initializeBudgets
         // - updateCategoryNames
     // MAIN LOGIC
+        // - initialize
+        // - make table cells clickable
 
 
 // INITIAL DATA 
@@ -562,3 +564,50 @@
       }
     });
   }
+
+
+// MAIN LOGIC
+    // initialize
+        initializeBudgets(); // initialize budgets
+        loadBudgetTable(); // Load table
+        updateCategories(); // set categories array to local storage values
+        updateAmounts(); // update amounts so that amount left is up to date after page refresh
+
+    // make table cells clickable
+        // Select all the rows in the budgetTableBody
+        const rows = document.querySelectorAll("#budgetTableBody tr");
+        // Convert rows to an array and exclude the last one
+        const allRowsExceptLast = Array.from(rows).slice(0, -1);
+        // Loop through each row except the last one
+        allRowsExceptLast.forEach((row) => {
+            // make category clickable
+                // Select the first cell (category) in each row
+                const categoryCell = row.querySelector("td:first-child");
+                // Add a click event listener if the categoryCell exists: expense input
+                if (categoryCell) {
+                    categoryCell.addEventListener("click", () => {
+                        // get row index
+                        rowIndex = Array.from(allRowsExceptLast).indexOf(row); // starts at 0
+                        // Call the function to handle category click with the category name
+                        handleCategoryClick(rowIndex);
+                    });
+                }
+            // make amount left clickable
+                // Select the second cell (amount left) in each row
+                const amountLeftCell = row.querySelector("td:nth-child(2)");
+                // Add a click event listener if the amountCell exists
+                if (amountLeftCell) {
+                    amountLeftCell.addEventListener("click", () => {
+                        // get row index
+                        rowIndex = Array.from(allRowsExceptLast).indexOf(row); // starts at 0
+                        openModal(rowIndex);
+                        displayExpenses(rowIndex); // Shows expenses for the selected category
+                        // open settings modal if gear icon is pressed
+                        settingsButton.addEventListener("click", () => {
+                            // Close the current modal for displaying expenses
+                            modal.style.display = "none";
+                            settings(rowIndex)
+                        });
+                    });
+                }
+        });
