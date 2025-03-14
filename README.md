@@ -1,4 +1,4 @@
 # budget-buddy
-simple budgeting web app focused on quick data entry on mobile phone
+UNDER CONSTRUCTION! DO NOT USE!
 
-Under construction. Do not use!
+simple budgeting web app focused on quick data entry on mobile phones
