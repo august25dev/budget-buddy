@@ -21,6 +21,7 @@
         // - updateCategories
         // - initializeBudgets
         // - updateCategoryNames
+        // - loadTermsModalContent
     // MAIN LOGIC
         // - initialize
         // - make table cells clickable
@@ -97,6 +98,11 @@
             settingsModal.style.display = "none";
         }
         });
+
+    // modal for showing terms
+      const termsModal = document.getElementById("termsModal");
+      // close modal if agree button is pressed
+        // ...
 
 
 // FUNCTIONS
@@ -565,8 +571,98 @@
     });
   }
 
+  // function to load termsModal content
+  function loadTermsModalContent(){
+    // Get modal content element
+    const modalContent = document.getElementById("termsModalContent");
+
+    // Clear previous content
+    modalContent.innerHTML = "";
+
+    // checkbox to not show terms again --> TODO: TEST THIS!!!   
+      // variable to store choice of showing terms (1: show, 0: don't show)
+      let showTerms;
+      showTerms = localStorage.getItem("showTerms"); // get the value from localStorage
+
+      // Create a container div for the checkbox
+      const checkboxDiv = document.createElement("div");
+      checkboxDiv.style.display = "flex";
+      checkboxDiv.style.alignItems = "center";
+      checkboxDiv.style.marginBottom = "10px";
+      
+      // Create the checkbox
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = `show_terms_checkbox`;
+      checkbox.style.marginRight = "10px";
+
+      // Create the label
+      const label = document.createElement("label");
+      label.htmlFor = `show_terms_checkbox`;
+      label.textContent = "do not show again";
+
+      // check checkbox if choice was made before
+      if (showTerms == 0) {
+        checkbox.checked = 1;
+      }
+
+      // Append checkbox and label to the container div
+      checkboxDiv.appendChild(checkbox);
+      checkboxDiv.appendChild(label);
+
+      // Append the container div to the modal content
+      modalContent.appendChild(checkboxDiv);
+
+      // Do not show terms again if checkbox is checked
+      checkbox.addEventListener("click", () => {
+        if (checkbox.checked) {
+          showTerms = 0;
+          localStorage.setItem("showTerms", JSON.stringify(showTerms));
+        } else {
+          showTerms = 1;
+          localStorage.setItem("showTerms", JSON.stringify(showTerms));
+        }
+      });
+
+    // agree button
+      // Add a agree button at the bottom
+      const agreeButton = document.createElement("button");
+      agreeButton.textContent = "agree";
+      agreeButton.style.marginTop = "20px";
+      agreeButton.style.padding = "10px 20px";
+      agreeButton.style.border = "none";
+      agreeButton.style.backgroundColor = "#e74c3c";
+      agreeButton.style.color = "white";
+      agreeButton.style.borderRadius = "5px";
+      agreeButton.style.cursor = "pointer";
+    
+      // Append agree button to modal content
+      modalContent.appendChild(agreeButton);
+
+      // close termsModal if agree button is pressed
+      agreeButton.addEventListener("click", () => {
+        termsModal.style.display = "none";
+      });
+  }
+
 
 // MAIN LOGIC
+    // show terms modal after loading finished
+    document.addEventListener("DOMContentLoaded", () => {
+      // variable to store choice of showing terms (1: show, 0: don't show)
+      let showTerms;
+      if (localStorage.getItem("showTerms") !== null) {
+          showTerms = localStorage.getItem("showTerms"); // If it exists, get the value from localStorage
+      } else {
+        showTerms = 1;
+        localStorage.setItem("showTerms", showTerms); // If it doesn't exist, set showTerms to 1 and save it in localStorage
+      }
+      if (showTerms == 1) {
+        loadTermsModalContent();
+        termsModal.style.display = "block";
+      }
+    });
+
     // initialize
         initializeBudgets(); // initialize budgets
         loadBudgetTable(); // Load table

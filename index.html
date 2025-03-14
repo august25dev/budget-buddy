@@ -33,7 +33,7 @@
         <!-- Heading -->
         <h1 style="font-size: 30px;">Budget Buddy MK0</h1>
         <!-- Disclaimer -->
-        <p>Under construction. Do not use!</p>
+        <p> <a href="#" onclick="loadTermsModalContent(); document.getElementById('termsModal').style.display='block'">terms</a> </p>
 
         <!-- Expense Table Section -->
         <section id="expenseTable">
@@ -119,6 +119,22 @@
                 <div id="SettingsModalContent2"> 
                     <!-- Any dynamic content should be added here -->
                 </div>
+            </div>
+        </div>
+
+        <!-- Modal for terms -->
+        <div id="termsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black;">
+            <div style="background-color: white; margin: 15% auto; padding: 20px; width: 80%; max-width: 400px; overflow-y: auto;">
+            <!-- Modal Heading -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h2 id="modalHeading" style="white-space: nowrap;">Terms</h2>
+            </div>
+            <div id="termsModalContentStatic" style="max-height: 300px; overflow-y: auto;"> 
+                <p> By using the app you agree to these <a href="https://github.com/august25dev/budget-buddy/blob/main/README.md">terms</a>.</p>
+            </div>
+            <div id="termsModalContent" style="max-height: 300px; overflow-y: auto;"> 
+                <!-- Any dynamic content should be added here -->
+            </div>
             </div>
         </div>
     </body>
