@@ -1,4 +1,6 @@
 // OVERVIEW
+    // POTENTIAL ISSUES
+        // - ...
     // INITIAL DATA
         // - categories array
     // MODALS
@@ -25,6 +27,11 @@
     // MAIN LOGIC
         // - initialize
         // - make table cells clickable
+
+
+// POTENTIAL ISSUES
+    // rowIndex is Used Without let or const: This implicitly declares a global variable, which can cause unexpected behaviour.
+    // Some functions implicitly declared?
 
 
 // INITIAL DATA 
