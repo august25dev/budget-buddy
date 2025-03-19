@@ -108,8 +108,6 @@
 
     // modal for showing terms
       const termsModal = document.getElementById("termsModal");
-      // close modal if agree button is pressed
-        // ...
 
 
 // FUNCTIONS
