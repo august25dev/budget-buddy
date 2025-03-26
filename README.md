@@ -1,5 +1,4 @@
 # Budget Buddy
-**UNDER CONSTRUCTION! DO NOT USE!**
 
 **Budget Buddy** is a simple budgeting web app focused on quick data entry on mobile phones.
 
@@ -20,7 +19,7 @@
 - *No Data Export*: The app does not support data export. Users must manually manage their data.
 
 **Code Generation**
-- *AI-Generated Code*: The code for this app was generated using AI. While efforts have been made to ensure its functionality, there may be errors or inaccuracies. The developer does not fully understand the code, which is part of the project's experimental nature.
+- *AI-Generated Code*: The code for this app was generated using AI. While efforts have been made to ensure its functionality, there may be errors or inaccuracies. The developer does not fully understand the code, which is part of the project's experimental nature. Therefore, there is no guarantee that calculations are correct.
 
 **Updates and Support**
 - Updates and support are not guaranteed.
@@ -30,17 +29,17 @@ By using **Budget Buddy**, you agree to these terms. If you are uncomfortable wi
 ## 2. User Manual
 
 **Setting up a category**
-- To set the *name of a category*: 
-1. Tap the "budget / left" cell/ the right cell in the row of the category. 
-2. Tap the settings icon on the top right corner. 
-3. Tap the "enter name" box and enter your new category name.
-4. Press the "update name" button.
-
 - To set the *budget for a category*:
 1. Tap the "budget / left" cell/ the right cell in the row of the category. 
 2. Tap the settings icon on the top right corner. 
 3. Tap the "enter budget" box and enter your new budget for the category.
 4. Press the "update budget" button.
+
+- To set the *name of a category*: 
+1. Tap the "left / budget" cell/ the right cell in the row of the category. 
+2. Tap the settings icon on the top right corner. 
+3. Tap the "enter name" box and enter your new category name.
+4. Press the "update name" button.
 
 **Entering an expense**
 1. Tap the "category" cell/ the left cell in the row of the category. 
@@ -66,3 +65,7 @@ By using **Budget Buddy**, you agree to these terms. If you are uncomfortable wi
 - *Terms*: Pressing this link will open up a window that asks you to agree to the [disclaimer](#1-disclaimer), so that you can use the app. If you agree you can check the "do not show again" box by clicking on it. Now the window does not pop up every time you refresh. 
 - *Support*: Pressing this link will take you to my buy [Buy Me a Coffee](https://buymeacoffee.com/august25dev) page. If you enjoy using **Budget Buddy** feel free to donate. Any amount is appreciated.
 - *More*: You can find out more about **Budget Buddy** and other stuff I am building on [my website](https://august25dev.github.io/).
+
+**Tips and Tricks**
+- *Bookmark*: Add a [bookmark](https://support.apple.com/en-mk/guide/iphone/iph42ab2f3a7/ios) to your homescreen. Now you can open **Budget Buddy** just like an app.
+- *Room for error*: It is a good idea to always have a buffer when budgeting, for example in case you make an error when entering an expense.
