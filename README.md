@@ -64,7 +64,7 @@ By using **Budget Buddy**, you agree to these terms. If you are uncomfortable wi
 **Links**
 - *Terms*: Pressing this link will open up a window that asks you to agree to the [disclaimer](#1-disclaimer), so that you can use the app. If you agree you can check the "do not show again" box by clicking on it. Now the window does not pop up every time you refresh. 
 - *Support*: Pressing this link will take you to my buy [Buy Me a Coffee](https://buymeacoffee.com/august25dev) page. If you enjoy using **Budget Buddy** feel free to donate. Any amount is appreciated.
-- *More*: You can find out more about **Budget Buddy** and other stuff I am building on [my website](https://august25dev.github.io/).
+- *More*: You can find out more about **Budget Buddy** and other stuff I am building on [my website](https://august25dev.github.io/projects/budget-buddy).
 
 **Tips and Tricks**
 - *Bookmark*: Add a [bookmark](https://support.apple.com/en-mk/guide/iphone/iph42ab2f3a7/ios) to your homescreen. Now you can open **Budget Buddy** just like an app.
